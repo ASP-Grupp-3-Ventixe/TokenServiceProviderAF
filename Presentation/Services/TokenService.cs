@@ -40,11 +40,12 @@ public class TokenService : ITokenService
                 SecurityAlgorithms.HmacSha256) ?? throw new NullReferenceException("Unable to create credentials");
             
             // Add claims to the token
-            List<Claim> claims = [new(ClaimTypes.NameIdentifier, request.UserId)];
-
+            List<Claim> claims = [
+                new(ClaimTypes.NameIdentifier, request.UserId),
+                new(JwtRegisteredClaimNames.Sub, request.UserId)
+            ];
             if (!string.IsNullOrEmpty(request.Email))
                 claims.Add(new Claim(ClaimTypes.Email, request.Email));
-
             if (!string.IsNullOrEmpty(request.Role))
                 claims.Add(new Claim(ClaimTypes.Role, request.Role));
 
