@@ -50,6 +50,11 @@ POST `/api/ValidateToken`
   "message": "Token is valid for user@example.com."
 }
 ```
+![Screenshot 2025-06-02 at 09 11 04](https://github.com/user-attachments/assets/f3d5e6ff-25a1-42aa-a025-50e33a647d79)
+
+![Screenshot 2025-06-02 at 09 11 50](https://github.com/user-attachments/assets/251e7b2a-511c-46f6-8549-8e5aa079cd77)
+
+
 
 ## Important Notes
 - JWT configuration must be identical across all services for tokens to be accepted.
