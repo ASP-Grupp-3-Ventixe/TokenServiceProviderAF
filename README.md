@@ -60,3 +60,4 @@ POST `/api/ValidateToken`
 - JWT configuration must be identical across all services for tokens to be accepted.
 - Tokens include claims: `nameid` (userId), `email`, and `role`.
 - The `message` field in responses displays the user's email (if provided), otherwise the userId.
+# TokenServiceProvider
